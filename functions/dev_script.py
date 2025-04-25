@@ -17,7 +17,7 @@ def create_person():
 			for file in os.listdir(path_person_dir):
 				if file.endswith(".jpg") or file.endswith(".png") or file.endswith(".jpeg"):
 					os.replace(os.path.join(path_person_dir, file), os.path.join(path_person_dir, "photos", file))
-					photos_lst.append(os.path.join("person_data", dir, "photos", file))
+					photos_lst.append(os.path.join("person_data2", dir, "photos", file))
 
 			if len(photos_lst):
 				save_json(dir, photos_lst, path_person_dir)

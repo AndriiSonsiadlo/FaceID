@@ -263,7 +263,7 @@ class AddPerson(Screen):
 			filename = image_path.split("/")[-1]
 			temp_dir = f"{path_temp}\\{filename}"
 
-			if self.ids.preview_photo.source is not '' and not path.exists(temp_dir):
+			if self.ids.preview_photo.source != '' and not path.exists(temp_dir):
 				detector = dlib.get_frontal_face_detector()
 				image = cv2.imread(image_path)
 				rects = detector(image, 1)
